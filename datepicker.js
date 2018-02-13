@@ -374,7 +374,7 @@ class DatePicker extends Component {
                 style={Style.datePickerMask}
                 activeOpacity={1}
                 underlayColor={'#00000077'}
-                onPress={this.onPressMask}
+                onPress={this.onPressConfirm}
               >
                 <TouchableComponent
                   underlayColor={'#fff'}
@@ -395,26 +395,7 @@ class DatePicker extends Component {
                         style={[Style.datePicker, customStyles.datePicker]}
                       />
                     </View>
-                    <TouchableComponent
-                      underlayColor={'transparent'}
-                      onPress={this.onPressCancel}
-                      style={[Style.btnText, Style.btnCancel, customStyles.btnCancel]}
-                      testID={cancelBtnTestID}
-                    >
-                      <Text
-                        style={[Style.btnTextText, Style.btnTextCancel, customStyles.btnTextCancel]}
-                      >
-                        {cancelBtnText}
-                      </Text>
-                    </TouchableComponent>
-                    <TouchableComponent
-                      underlayColor={'transparent'}
-                      onPress={this.onPressConfirm}
-                      style={[Style.btnText, Style.btnConfirm, customStyles.btnConfirm]}
-                      testID={confirmBtnTestID}
-                    >
-                      <Text style={[Style.btnTextText, customStyles.btnTextConfirm]}>{confirmBtnText}</Text>
-                    </TouchableComponent>
+                    
                   </Animated.View>
                 </TouchableComponent>
               </TouchableComponent>
@@ -431,10 +412,10 @@ DatePicker.defaultProps = {
   androidMode: 'default',
   date: '',
   // component height: 216(DatePickerIOS) + 1(borderTop) + 42(marginTop), IOS only
-  height: 259,
+  height: 216,
 
   // slide animation duration time, default to 300ms, IOS only
-  duration: 300,
+  duration: 250,
   confirmBtnText: '确定',
   cancelBtnText: '取消',
   iconSource: require('./date_icon.png'),
