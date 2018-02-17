@@ -415,7 +415,7 @@ DatePicker.defaultProps = {
   height: 216,
 
   // slide animation duration time, default to 300ms, IOS only
-  duration: 250,
+  duration: 300,
   confirmBtnText: '确定',
   cancelBtnText: '取消',
   iconSource: require('./date_icon.png'),
